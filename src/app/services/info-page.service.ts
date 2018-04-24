@@ -5,15 +5,28 @@ import { Http } from '@angular/http';
 export class InfoPageService {
   info:any = {};
   infoCargada:boolean = false;
+  infoCargada_sobre_nosotros:boolean = false;
+  equipo:any[] = [];
 
   constructor( public http:Http ) {
-    this.http.get("assets/data/info.pagina.json")
+    this.carga_info();
+    this.carga_sobre_nosotros();
+   }
+
+    public carga_info(){
+      this.http.get("assets/data/info.pagina.json")
               .subscribe(data => {
-                console.log(data.json());
                 this.info = data.json();
                 this.infoCargada = true;
-              })
-   }
-    
-    
+              });  
+    }
+    public carga_sobre_nosotros(){
+      this.http.get("https://portafolioapp-dfc40.firebaseio.com/equipo.json")
+              .subscribe(data => {
+                this.equipo = data.json();
+                this.infoCargada_sobre_nosotros = true;
+                console.log(data.json());
+                
+              });
+    }
 }
