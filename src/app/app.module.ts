@@ -11,8 +11,9 @@ import { PortafolioComponent } from './components/portafolio/portafolio.componen
 import { AboutComponent } from './components/about/about.component';
 import { ItemPortafolioComponent } from './components/item-portafolio/item-portafolio.component';
 
-//infoPage
+//infoPage services
 import { InfoPageService } from './services/info-page.service';
+import { ProductosService } from './services/productos.service';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { InfoPageService } from './services/info-page.service';
     HttpModule
   ],
   providers: [ 
-    InfoPageService
+    InfoPageService,
+    ProductosService
   ],
   bootstrap: [AppComponent]
 })

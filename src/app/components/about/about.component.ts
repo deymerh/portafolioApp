@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { InfoPageService } from '../../services/info-page.service';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styles: []
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor(public _is:InfoPageService) { }
 
 }
