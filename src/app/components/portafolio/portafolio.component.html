@@ -24,7 +24,11 @@
     </div>
     <!-- Fin Loading   -->
     <div *ngIf="_ps.productos.length > 0 && !_ps.cargando_productos" class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
+<<<<<<< HEAD
         <a *ngFor="let producto of _ps.productos" [routerLink]="['/producto', producto.cod]" class="rk-item ae-masonry__item">
+=======
+        <a *ngFor="let producto of _ps.productos" [href]="producto.url" class="rk-item ae-masonry__item">
+>>>>>>> 8339ef6a97356134d9c7c8c55c408c99d9b658b2
             <img src="assets/productos/{{producto.url}}.jpg" alt="">
             <div class="item-meta">
                 <h2>{{producto.titulo}}</h2>
