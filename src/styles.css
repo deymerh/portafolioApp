@@ -1,4 +1,4 @@
-/* ANimaciones Usando Animate*/
+/* Animaciones Usando Animate*/
 
 .animated {
     -webkit-animation-duration: 3s;
@@ -19,4 +19,22 @@
 .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+
+/* Loading */
+
+svg path,
+svg rect {
+    fill: black;
 }
