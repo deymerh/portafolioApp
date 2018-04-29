@@ -14,8 +14,10 @@ export class ProductosService {
     this.http.get('https://portafolioapp-dfc40.firebaseio.com/productos_idx.json')
         .subscribe(productos => {
           console.log(productos.json());
-          this.cargando_productos = false;
-          this.productos = productos.json();
+          setTimeout(() => {
+            this.cargando_productos = false;
+            this.productos = productos.json();  
+          }, 1500);
         });
   }
 }
